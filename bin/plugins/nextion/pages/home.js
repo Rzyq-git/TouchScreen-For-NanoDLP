@@ -60,7 +60,10 @@ var Home = function (_abstract) {
                 this.addListener("click_b1", function (e) {
                   _this2.changePage("plates");
                 });
-
+                
+                this.addListener("click_b4", () => _this2.nanoDLP.command("/printer/off"));
+                this.addListener("click_b5", () => _this2.nanoDLP.command("printer/restart"));
+                
               case 7:
               case "end":
                 return _context.stop();
