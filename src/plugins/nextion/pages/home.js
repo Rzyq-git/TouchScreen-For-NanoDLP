@@ -22,6 +22,11 @@ export default class Home extends abstract{
     this.addListener("click_b1", (e)=>{
       this.changePage("plates");
     });
+    this.addListener("click_b4", () => this.nanoDLP.command("/button/press/0"));
+    this.addListener("click_b5", () => this.nanoDLP.command("/button/press/1"));
+    this.addListener("click_b6", () => this.nanoDLP.command("/printer/off"));
+    this.addListener("click_b7", () => this.nanoDLP.command("printer/restart"));
+
   }
   
   async update(status, log){
